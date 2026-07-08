@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Deep, Sophisticated Dark Theme - Linear/Vercel inspired */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    
+    --primary: 0 0% 100%;
+    --secondary: 240 3.7% 65.9%;
+    
+    --accent: 240 4.8% 95.9%;
+    --accent-glow: 220 100% 60%;
+    
+    --muted: 240 3.7% 12%;
+    --border: 240 3.7% 15.9%;
+    
+    --radius: 1rem;
+  }
+
+  body {
+    @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))] antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: hsl(var(--accent-glow) / 0.2);
+    color: white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted rounded-full border-2 border-background hover:bg-secondary/40 transition-colors;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/[0.02] backdrop-blur-2xl border border-white/[0.06] shadow-[0_8px_32px_0_rgba(0,0,0,0.4)];
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-neutral-600;
+  }
+
+  .premium-shadow {
+    @apply shadow-[0_20px_50px_-12px_rgba(0,0,0,0.6)];
+  }
+}
