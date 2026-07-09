@@ -6,7 +6,7 @@ import { Header } from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Sujan | Creative Portfolio",
-  description: "Senior Product Designer & Frontend Architect showcasing premium digital experiences.",
+  description: "Product Designer focused on creating intuitive, accessible, and modern digital experiences.",
 };
 
 export default function RootLayout({
