@@ -8,7 +8,7 @@ export const Header = () =>{
 
   useEffect(() => {
     const observers = new Map();
-    const sections = ['hero', 'selected-works', 'about', 'skills', 'contact'];
+    const sections = ['hero', 'selected-works', 'about', 'contact'];
     
     const observer = new IntersectionObserver(
       (entries) => {
@@ -44,9 +44,8 @@ export const Header = () =>{
       </a>
       <nav className="flex gap-6">
         {[
-          { name: 'Work',   id: 'selected-works' },
-          { name: 'About',  id: 'about' },
-          { name: 'Skills', id: 'skills' },
+          { name: 'Work', id: 'selected-works' },
+          { name: 'About', id: 'about' },
           { name: 'Contact', id: 'contact' },
         ].map((item) => (
           <motion.a
